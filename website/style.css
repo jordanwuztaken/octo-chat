@@ -1,0 +1,112 @@
+
+.space-grotesk-<uniquifier> {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* Login Screen */
+.login-container {
+    text-align: center;
+    border: 2px solid #00ff41;
+    padding: 2rem;
+    box-shadow: 0 0 15px #00ff41;
+    background: #000;
+}
+
+input {
+    background: #000;
+    border: 1px solid #00ff41;
+    color: #fff;
+    padding: 10px;
+    font-family: inherit;
+    outline: none;
+}
+
+button {
+    background: #00ff41;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #fff;
+}
+
+/* Chat Screen */
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    background: #0d0d0d;
+}
+
+header {
+    padding: 15px;
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.message {
+    background: #1e1e1e;
+    padding: 8px 12px;
+    border-radius: 4px;
+    max-width: 80%;
+    word-wrap: break-word;
+    color: #ddd;
+}
+
+.message span.user {
+    color: #00ff41;
+    font-weight: bold;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.message.self {
+    align-self: flex-end;
+    background: #004d1a;
+    border: 1px solid #00ff41;
+}
+
+.message.system {
+    align-self: center;
+    background: none;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+form {
+    display: flex;
+    padding: 10px;
+    background: #1a1a1a;
+    border-top: 1px solid #333;
+}
+
+form input {
+    flex: 1;
+    margin-right: 10px;
+}
