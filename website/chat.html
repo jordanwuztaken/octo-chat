@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snail Chat Replica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="login-container" id="loginScreen">
+        <h1>ENTER CHATROOM</h1>
+        <input type="text" id="usernameInput" placeholder="Enter Nickname..." maxlength="15">
+        <button onclick="login()">jg.join()</button>
+    </div>
+
+    <div class="chat-container" id="chatScreen" style="display: none;">
+        <header>
+            <div class="logo">SNAIL_CHAT_V1</div>
+            <button onclick="logout()" class="logout-btn">LEAVE</button>
+        </header>
+        
+        <div class="messages" id="messagesList">
+            <div class="message system">Welcome to the chat room.</div>
+        </div>
+
+        <form id="messageForm" onsubmit="sendMessage(event)">
+            <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off">
+            <button type="submit">SEND</button>
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
